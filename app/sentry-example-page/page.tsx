@@ -49,15 +49,7 @@ export default function Page() {
             margin: "18px",
           }}
           onClick={async () => {
-            await Sentry.startSpan({
-              name: 'Example Frontend Span',
-              op: 'test'
-            }, async () => {
-              const res = await fetch("/api/sentry-example-api");
-              if (!res.ok) {
-                throw new Error("Sentry Example Frontend Error");
-              }
-            });
+            Sentry.captureMessage("Something went wrong", "error");
           }}
         >
           Throw error!
@@ -65,7 +57,10 @@ export default function Page() {
 
         <p>
           Next, look for the error on the{" "}
-          <a href="https://songeun-kee.sentry.io/issues/?project=4507621148524544">Issues Page</a>.
+          <a href="https://songeun-kee.sentry.io/issues/?project=4507621148524544">
+            Issues Page
+          </a>
+          .
         </p>
         <p style={{ marginTop: "24px" }}>
           For more information, see{" "}
