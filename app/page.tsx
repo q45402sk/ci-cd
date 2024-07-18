@@ -5,14 +5,14 @@ export const metadata = {
 export default function Page() {
   return (
     <h1>
-      <button
+      {/* <button
         type="button"
         onClick={() => {
           throw new Error("Sentry Frontend Error");
         }}
       >
         Throw error
-      </button>
+      </button> */}
     </h1>
   );
 }
