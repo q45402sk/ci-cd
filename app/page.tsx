@@ -5,7 +5,7 @@ export const metadata = {
 export default function Page() {
   return (
     <h1>
-      App Router lalala
+      App Router lalaladdddd
       {/* <button
         type="button"
         onClick={() => {
